@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { from } from 'rxjs';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces-pipe';
 import { StarComponent } from './shared/star.component';
+import { ProductService } from './products/product.service';
 
 
 @NgModule({
@@ -21,6 +22,8 @@ import { StarComponent } from './shared/star.component';
     BrowserModule,
     FormsModule
   ],
+  providers:[ProductService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
