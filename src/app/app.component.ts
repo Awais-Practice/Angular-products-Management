@@ -2,9 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'pm-root',
-  template:`<div class="container"><h1 class="text-center mt-5 mb-5">Product Manegment</h1><div><pm-product></pm-product></div></div>`
-
-
+  template:` <div class="container">
+    <nav class='navbar navbar-expand navbar-light bg-light'>
+  <a class='navbar-brand'>{{pageTitle}}</a>
+  <ul class='nav nav-pills'>
+    <li><a  class='nav-link' [routerLink]='["/welcome"]'>Home</a></li>
+    <li><a  class='nav-link' [routerLink]='["/products"]'>Product List</a></li>
+</ul>
+</nav>
+<router-outlet></router-outlet>
+  </div>
+ `
 
 })
 export class AppComponent {
