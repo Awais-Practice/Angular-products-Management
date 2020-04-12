@@ -11,11 +11,13 @@ import { ProductService } from './products/product.service';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import {RouterModule} from '@angular/router'
+import { ProductDetailGuard } from './products/product-detail.guard';
 
 const appTest =
 [
   {path:'products', component: ProductListComponent},
-  {path:'products/:id', component: ProductDetailComponent},
+  {path:'products/:id',
+  canActivate:[ProductDetailGuard], component: ProductDetailComponent},
   {path:'welcome', component: WelcomeComponent},
   {path:'', component: WelcomeComponent},
   {path:'product', component: ProductDetailComponent}
