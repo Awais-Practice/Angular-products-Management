@@ -62,8 +62,14 @@ performFilter(filterBy:string):IProduct[]{
   }
   ngOnInit(){
 
-  this.products =this.productService.getProducts();
-  this.filtredProducts = this.products;
+  this.productService.getProducts().subscribe({
+    next:products=>{
+      this.products =products;
+      this.filtredProducts = this.products;
+
+    }
+
+  });
 
   }
 }
