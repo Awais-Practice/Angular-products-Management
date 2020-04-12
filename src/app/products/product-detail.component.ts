@@ -9,7 +9,7 @@ import { from } from 'rxjs';
 export class ProductDetailComponent implements OnInit {
 pageTitle:string ="Product Detail";
 product: IProduct;
-  constructor() { }
+
 
   ngOnInit() {
 
